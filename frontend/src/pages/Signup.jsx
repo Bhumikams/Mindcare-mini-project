@@ -28,7 +28,7 @@ function Signup() {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:8000/api/auth/signup', formData);
+      await axios.post('https://mindcare-mini-project.onrender.com/api/auth/signup', formData);
       navigate('/login');
     } catch (err) {
       setError(err.response?.data?.detail || 'Signup failed. Please try again.');
