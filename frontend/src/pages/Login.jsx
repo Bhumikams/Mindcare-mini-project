@@ -27,7 +27,7 @@ function Login() {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:8000/api/auth/login', 
+      const response = await axios.post('https://mindcare-mini-project.onrender.com/api/auth/login', 
         new URLSearchParams({
           username: formData.username,
           password: formData.password
