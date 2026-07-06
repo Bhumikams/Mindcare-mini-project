@@ -95,7 +95,7 @@ function Dashboard() {
   const fetchEntries = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:8000/api/journal/entries', {
+      const response = await axios.get('https://mindcare-mini-project.onrender.com/api/journal/entries', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       setEntries(response.data);
@@ -107,7 +107,7 @@ function Dashboard() {
   const fetchTrends = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:8000/api/journal/trends', {
+      const response = await axios.get('https://mindcare-mini-project.onrender.com/api/journal/trends', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       
@@ -131,7 +131,7 @@ function Dashboard() {
   const fetchActivities = async (entryId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://localhost:8000/api/journal/activities/${entryId}`, {
+      const response = await axios.get(`https://mindcare-mini-project.onrender.com/api/journal/activities/${entryId}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       setActivities(response.data);
@@ -144,7 +144,7 @@ function Dashboard() {
   const fetchWritingPrompt = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:8000/api/journal/writing-prompt', {
+      const response = await axios.get('https://mindcare-mini-project.onrender.com/api/journal/writing-prompt', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       setWritingPrompt(response.data.prompt);
@@ -165,7 +165,7 @@ function Dashboard() {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:8000/api/journal/entries', 
+      await axios.post('https://mindcare-mini-project.onrender.com/api/journal/entries', 
         { content },
         {
           headers: {
@@ -194,7 +194,7 @@ function Dashboard() {
     
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:8000/api/journal/entries/${entryId}`, {
+      await axios.delete(`https://mindcare-mini-project.onrender.com/api/journal/entries/${entryId}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       setSuccess('✅ Entry deleted successfully!');
