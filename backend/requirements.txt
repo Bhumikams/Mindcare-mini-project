@@ -13,6 +13,7 @@ h11==0.16.0
 httptools==0.7.1
 idna==3.11
 joblib==1.5.2
+textblob
 nltk==3.9.2
 numpy==2.3.4
 pandas==2.3.3
